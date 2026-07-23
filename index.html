@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brazilian Cleaning Services | New Jersey</title>
+<meta name="description" content="Brazilian-owned cleaning team serving New Jersey. Residential, office, deep, Airbnb, and move-in/move-out cleaning. Book online in minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0b0b0c;
+    --ink-soft: #17171a;
+    --cream: #f3eee4;
+    --surface: #fbfaf7;
+    --gold: #c9a227;
+    --forest: #1f3d2b;
+    --stone: #8a8378;
+    --line: rgba(243,238,228,0.14);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    color: var(--ink);
+    background: var(--surface);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- NAV ---------- */
+  header.site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 500;
+    background: rgba(11,11,12,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand img { width: 40px; height: 40px; border-radius: 50%; }
+  .brand span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+  .brand span small {
+    display: block;
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-top: 2px;
+  }
+  nav.links { display: flex; align-items: center; gap: 32px; }
+  nav.links a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  nav.links a:hover { opacity: 1; }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--ink) !important;
+    padding: 10px 20px;
+    border-radius: 3px;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+  }
+  @media (max-width: 760px) {
+    nav.links a:not(.nav-cta) { display: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+  }
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; }
+  }
+  .eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-size: clamp(38px, 5.4vw, 62px);
+    line-height: 1.04;
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+  .hero p.lede {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: rgba(243,238,228,0.78);
+    max-width: 480px;
+    margin-bottom: 36px;
+  }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
+  .btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.15s, background 0.15s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--gold); color: var(--ink); }
+  .btn-primary:hover { background: #ddb635; }
+  .btn-ghost { background: transparent; color: var(--cream); border: 1px solid var(--line); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-facts { display: flex; gap: 34px; flex-wrap: wrap; }
+  .hero-facts div { border-left: 2px solid var(--gold); padding-left: 14px; }
+  .hero-facts .f-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: rgba(243,238,228,0.55);
+    text-transform: uppercase;
+  }
+  .hero-facts .f-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-top: 3px;
+  }
+
+  /* Signature line-art motif */
+  .motif-wrap { position: relative; display: flex; justify-content: center; }
+  .motif-wrap svg { width: 100%; max-width: 380px; height: auto; }
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust-strip {
+    background: var(--cream);
+    border-bottom: 1px solid rgba(11,11,12,0.08);
+    padding: 22px 0;
+  }
+  .trust-inner {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .trust-inner span { display: flex; align-items: center; gap: 8px; opacity: 0.85; }
+  .trust-inner svg { flex-shrink: 0; }
+
+  /* ---------- SERVICES ---------- */
+  .section { padding: 100px 0; }
+  .section-head { max-width: 620px; margin-bottom: 56px; }
+  .section-head .eyebrow { color: var(--forest); }
+  .section-head .eyebrow::before { background: var(--forest); }
+  .section-head h2 { font-size: clamp(28px, 3.6vw, 40px); margin-bottom: 14px; }
+  .section-head p { color: var(--stone); font-size: 16px; max-width: 480px; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(11,11,12,0.08);
+    border: 1px solid rgba(11,11,12,0.08);
+  }
+  @media (max-width: 860px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+  .service-card {
+    background: var(--surface);
+    padding: 36px 30px;
+    transition: background 0.2s;
+  }
+  .service-card:hover { background: var(--cream); }
+  .service-card .icon { margin-bottom: 20px; }
+  .service-card h3 { font-size: 18px; margin-bottom: 8px; }
+  .service-card p { font-size: 14px; color: var(--stone); }
+
+  /* ---------- ABOUT / TEAM ---------- */
+  .about-section { background: var(--cream); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 64px;
+    align-items: center;
+  }
+  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } }
+  .about-photo {
+    position: relative;
+  }
+  .about-photo img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 30px 60px -20px rgba(11,11,12,0.35);
+  }
+  .about-photo .tag {
+    position: absolute;
+    bottom: -18px;
+    left: -18px;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .about-photo .tag span { color: var(--gold); }
+  @media (max-width: 560px) { .about-photo .tag { left: 0; bottom: -14px; font-size: 11px; padding: 10px 16px; } }
+
+  .about-copy .eyebrow { color: var(--forest); }
+  .about-copy .eyebrow::before { background: var(--forest); }
+  .about-copy h2 { font-size: clamp(26px, 3.4vw, 36px); margin-bottom: 20px; }
+  .about-copy p { color: #3a352c; font-size: 16px; margin-bottom: 16px; max-width: 480px; }
+  .about-list { margin-top: 26px; display: flex; flex-direction: column; gap: 14px; }
+  .about-list div { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; }
+  .about-list svg { flex-shrink: 0; margin-top: 3px; }
+
+  /* ---------- BOOKING ---------- */
+  .booking-section { background: var(--ink); color: var(--cream); }
+  .booking-head { text-align: center; max-width: 560px; margin: 0 auto 44px; }
+  .booking-head .eyebrow { justify-content: center; color: var(--gold); }
+  .booking-head .eyebrow::before { display: none; }
+  .booking-head h2 { color: var(--cream); font-size: clamp(28px, 3.6vw, 40px); margin-bottom: 14px; }
+  .booking-head p { color: rgba(243,238,228,0.7); font-size: 16px; }
+  .booking-frame {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--surface);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px -30px rgba(0,0,0,0.6);
+  }
+  .booking-frame iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    display: block;
+  }
+
+  /* ---------- INSTAGRAM / SOCIAL PROOF ---------- */
+  .social-strip {
+    background: var(--surface);
+    padding: 56px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(11,11,12,0.08);
+  }
+  .social-strip p { font-family: 'Space Grotesk', sans-serif; font-size: 13px; color: var(--stone); margin-bottom: 10px; letter-spacing: 0.02em; }
+  .social-strip a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .social-strip a:hover { color: var(--gold); }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--ink);
+    color: rgba(243,238,228,0.6);
+    padding: 60px 0 30px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
+  .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .footer-brand img { width: 36px; height: 36px; border-radius: 50%; }
+  .footer-brand span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--cream); font-size: 15px; }
+  footer p.small { font-size: 13.5px; max-width: 280px; }
+  footer h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  footer ul a { font-size: 14px; text-decoration: none; color: rgba(243,238,228,0.7); }
+  footer ul a:hover { color: var(--cream); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    font-size: 12.5px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <img src="images/logo.png" alt="Brazilian Cleaning Services logo">
+        <span>BRAZILIAN<small>CLEANING SERVICES</small></span>
+      </a>
+      <nav class="links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#booking" class="nav-cta">Get a Free Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">New Jersey · Brazilian-Owned &amp; Operated</div>
+        <h1>A spotless home<br>doesn't happen<br>by <em>accident.</em></h1>
+        <p class="lede">Brazilian Cleaning Services brings a Brazilian standard of care — meticulous, warm, and genuinely thorough — to homes, offices, and short-term rentals across New Jersey.</p>
+        <div class="hero-ctas">
+          <a href="#booking" class="btn btn-primary">Schedule a Free Quote</a>
+          <a href="https://wa.me/REPLACE_WITH_PHONE_NUMBER" class="btn btn-ghost">Message on WhatsApp</a>
+        </div>
+        <div class="hero-facts">
+          <div>
+            <div class="f-label">Service Area</div>
+            <div class="f-value">New Jersey</div>
+          </div>
+          <div>
+            <div class="f-label">Booking</div>
+            <div class="f-value">Online, in minutes</div>
+          </div>
+          <div>
+            <div class="f-label">Payment</div>
+            <div class="f-value">Zelle · Venmo · Cash</div>
+          </div>
+        </div>
+      </div>
+      <div class="motif-wrap">
+        <svg viewBox="0 0 340 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M180 40C180 40 245 70 250 130C255 190 210 210 210 210" stroke="#c9a227" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="292" cy="58" r="2.5" fill="#c9a227"/>
+          <circle cx="270" cy="42" r="1.6" fill="#c9a227"/>
+          <circle cx="304" cy="80" r="1.6" fill="#c9a227"/>
+          <path d="M150 120c-32 0-58 26-58 58s26 58 58 58c8 0 16-1.6 23-4.5" stroke="#f3eee4" stroke-width="1.4" opacity="0.5"/>
+          <path d="M118 258c0 0-14 40-14 78 0 22 12 40 12 40" stroke="#f3eee4" stroke-width="1.4" opacity="0.35"/>
+          <g opacity="0.9">
+            <path d="M118 96c-6 18-6 34 2 48 9 16 26 24 45 22 4 22-2 40-14 54-8-2-16-6-22-12-16-15-22-38-18-62 3-18 8-34 7-50z" fill="#f3eee4"/>
+            <path d="M150 108c14 4 24 16 24 30" stroke="#0b0b0c" stroke-width="1.2" fill="none"/>
+          </g>
+          <path d="M96 300c26-10 60-38 96-90" stroke="#f3eee4" stroke-width="1" opacity="0.25" stroke-dasharray="2 5"/>
+          <path d="M40 340c26-4 76-24 110-64 20 6 44 6 62-4" stroke="#1f3d2b" stroke-width="1.6" opacity="0.75"/>
+          <path d="M30 348c8-3 20-6 30-11" stroke="#1f3d2b" stroke-width="1.6" opacity="0.75"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-strip">
+    <div class="wrap trust-inner">
+      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Background-checked team</span>
+      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Own supplies &amp; equipment</span>
+      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Flexible weekly plans</span>
+      <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Straightforward pricing</span>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What we do</div>
+        <h2>Six ways we keep a space right.</h2>
+        <p>From a one-time deep clean to a standing weekly visit, every service follows the same checklist-driven approach.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 12l2-8h14l2 8M3 12v7a1 1 0 001 1h16a1 1 0 001-1v-7M3 12h18" stroke="#0b0b0c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Residential Cleaning</h3>
+          <p>Kitchens, bathrooms, floors, and living spaces — the full walkthrough, every visit.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 21V7l8-4 8 4v14M4 21h16M9 21v-6h6v6" stroke="#0b0b0c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Office Cleaning</h3>
+          <p>Desks, common areas, and floors cleaned around your team's schedule, not against it.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="#0b0b0c" stroke-width="0"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18" stroke="#0b0b0c" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3>Deep Cleaning</h3>
+          <p>Baseboards, vents, behind appliances — the detail work a regular clean skips.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM12 6v6l4 2" stroke="#0b0b0c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Regular Cleaning</h3>
+          <p>Weekly, biweekly, or monthly visits that keep a space at the same standard, always.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 21l9-15 9 15H3z" stroke="#0b0b0c" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="#0b0b0c" stroke-width="1.5"/></svg></div>
+          <h3>Airbnb Cleaning</h3>
+          <p>Fast turnovers between guests, staged and reset so every check-in feels brand new.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 12h13M12 6l6 6-6 6M21 5v14" stroke="#0b0b0c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Move-in / Move-out</h3>
+          <p>A ground-up reset for empty units — the kind of clean a security deposit depends on.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="images/team.png" alt="Two members of the Brazilian Cleaning Services team at work">
+        <div class="tag">Our team, <span>on the job</span></div>
+      </div>
+      <div class="about-copy">
+        <div class="eyebrow">Who's cleaning your home</div>
+        <h2>Run by Brazilian hands, held to a Brazilian standard.</h2>
+        <p>Brazilian Cleaning Services was built on a simple idea: treat every client's home the way you'd want your own treated — nothing skipped, nothing rushed.</p>
+        <p>The team behind every visit is small on purpose, so the same care and attention shows up whether it's a first deep clean or your fortieth weekly visit.</p>
+        <div class="about-list">
+          <div>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Every job follows the same room-by-room checklist.</span>
+          </div>
+          <div>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Products and equipment brought to every visit — nothing you need to supply.</span>
+          </div>
+          <div>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Direct communication — text, call, or WhatsApp, your choice.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-strip">
+    <p>Recent work &amp; before/afters</p>
+    <a href="https://instagram.com/brazilian.cleaning_" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+      @brazilian.cleaning_
+    </a>
+  </section>
+
+  <section class="section booking-section" id="booking">
+    <div class="wrap">
+      <div class="booking-head">
+        <div class="eyebrow">Book online</div>
+        <h2>Get your free quote now.</h2>
+        <p>Pick a service, tell us about the space, and choose a time — we'll confirm by text within minutes.</p>
+      </div>
+      <div class="booking-frame">
+        <!--
+          Ponto de integração com o sistema de agendamento.
+          Troca "brazilian-cleaning-nj" pelo slug real cadastrado no banco.
+        -->
+        <iframe src="https://lw-clean.vercel.app/book/brazilian-cleaning-1784833065250" title="Book a cleaning"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="Brazilian Cleaning Services logo">
+            <span>BRAZILIAN CLEANING SERVICES</span>
+          </div>
+          <p class="small">Residential, office, and Airbnb cleaning across New Jersey — booked online, delivered in person.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About the team</a></li>
+            <li><a href="#booking">Book a cleaning</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="https://wa.me/REPLACE_WITH_PHONE_NUMBER">WhatsApp</a></li>
+            <li><a href="https://instagram.com/brazilian.cleaning_">@brazilian.cleaning_</a></li>
+            <li><a href="#booking">Free quote request</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Brazilian Cleaning Services · New Jersey</span>
+        <span>Payment via Zelle, Venmo, or cash</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
